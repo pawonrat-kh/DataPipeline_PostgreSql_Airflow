@@ -16,7 +16,7 @@ In the data pipeline, I have 6 tasks.
   5. Insert data: I inserted data by reading line by line from txt file and this task will take time around 20 mins.
   6. Delete file after inserted: I deleted the file after the insert task finished.
 
-This is the result when tasks are completely success.
+This is the result of the DAG graph when tasks are completely successful.
 
 ![image](https://github.com/pawonrat-kh/DataPipeline_PostgreSql_Airflow/assets/90255313/760f676f-c05e-4a13-8763-1b43c69e91ff)
 
