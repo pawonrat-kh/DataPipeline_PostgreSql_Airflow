@@ -2,7 +2,7 @@
 
 Hello, My name is Pawonrat Khumngoen. In this repository, I will show and walk through my personal project, which is a data pipeline. In this project, I developed a data pipeline using a case from previous work about getting files from One Drive and transferring them to Google storage. 
 
-After I researched and learned more data engineer skills from Coursera, I am using this knowledge composed of Data modeling, Data pipeline, Databases, Shell scripting, and Apache Airflow to design and create data pipeline simulation. I used sale coffee transaction data that is stored on Google Drive so the others can access, download, or do step-by-step following my data pipeline easier.
+After I researched and learned more Data engineer skills from Coursera, I am using this knowledge composed of Data modeling, Data pipeline, Databases, Shell scripting, and Apache Airflow to design and create data pipeline simulation. I used sale coffee transaction data that is stored on Google Drive so the others can access, download, or do step-by-step following my data pipeline easier.
 
 I used a data pipeline tool, which is Apache Airflow to run the pipeline, set a schedule, and send notifications of DAG status when tasks failed, retried, or success. In addition, I used the PostgreSQL database to store data and Docker for running Apache Airflow.
 
@@ -15,4 +15,8 @@ In the data pipeline, I have 6 tasks.
   4. Download data: I used the bash command to download sale coffee transaction data which is a txt format file composed of text insert data SQL command from URL.
   5. Insert data: I inserted data by reading line by line from txt file and this task will take time around 20 mins.
   6. Delete file after inserted: I deleted the file after the insert task finished.
+
+This is the result when tasks are completely success.
+
+![image](https://github.com/pawonrat-kh/DataPipeline_PostgreSql_Airflow/assets/90255313/760f676f-c05e-4a13-8763-1b43c69e91ff)
 
