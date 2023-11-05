@@ -1,4 +1,4 @@
-# DataPipeline_PostSql_Airflow
+# DataPipeline_PostgreSql_Airflow
 
 Hello, My name is Pawonrat Khumngoen. In this repository, I will show and walk through my personal project, which is a data pipeline. In this project, I developed a data pipeline using a case from previous work about getting files from One Drive and transferring them to Google storage. 
 
@@ -6,7 +6,7 @@ After I researched and learned more data engineer skills from Coursera, I am usi
 
 I used a data pipeline tool, which is Apache Airflow to run the pipeline, set a schedule, and send notifications of DAG status when tasks failed, retried, or success. In addition, I used the PostgreSQL database to store data and Docker for running Apache Airflow.
 
-![image](https://github.com/pawonrat-kh/DataPipeline_PostSql_Airflow/assets/90255313/dda1d7e6-65d8-4f8b-8b32-ad9a39dec87b)
+![Coffee DataPipeline drawio (1)](https://github.com/pawonrat-kh/DataPipeline_PostgreSql_Airflow/assets/90255313/9d951855-fc3b-463a-8fda-ed1ce8bd8f75)
 
 In the data pipeline, I have 6 tasks.
 * 1. Connect to PostgreSQL: For checking database connection status.
