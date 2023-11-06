@@ -132,7 +132,7 @@ def insert_data(ti=None):
 
 default_args = {
     'owner' : 'Pawonrat.kh',
-    'email' : <email that you want to send noti>,
+    'email' : <your email>,
     'email_on_failure': True,
     'email_on_retry': True,
     'default_view' : 'graph',
