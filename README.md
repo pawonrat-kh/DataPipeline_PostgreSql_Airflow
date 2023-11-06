@@ -2,9 +2,13 @@
 
 Hello, My name is Pawonrat Khumngoen. In this repository, I will show and walk through my personal project, which is a data pipeline. In this project, I developed a data pipeline using a case from previous work about getting files from One Drive and transferring them to Google storage. 
 
-After I researched and learned more Data engineer skills from Coursera, I am using this knowledge composed of Data modeling, Data pipeline, Databases, Shell scripting, and Apache Airflow to design and create data pipeline simulation. I used sale coffee transaction data that is stored on Google Drive so the others can access, download, or do step-by-step following my data pipeline easier.
+After I researched and learned more Data engineering skills from Coursera, I am using this knowledge composed of Data modeling, Data pipeline, Databases, Shell scripting, and Apache Airflow to design and create data pipeline simulation. I used sale coffee transaction data that is stored on Google Drive so the others can access, download, or do step-by-step following my data pipeline easier.
 
-I used a data pipeline tool, which is Apache Airflow to run the pipeline, set a schedule, and send notifications of DAG status when tasks failed, retried, or success. In addition, I used the PostgreSQL database to store data and Docker for running Apache Airflow.
+I used a data pipeline tool, which is Apache Airflow to run the pipeline, set a daily schedule, and send email notifications of DAG status when tasks failed, retried, or success. In addition, I used the PostgreSQL database to store data and Docker for running Apache Airflow. 
+
+To install Apache Airflow on Docker, you can follow by steps at https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html.
+
+This is a data pipeline overview.
 
 ![Coffee DataPipeline drawio (1)](https://github.com/pawonrat-kh/DataPipeline_PostgreSql_Airflow/assets/90255313/9d951855-fc3b-463a-8fda-ed1ce8bd8f75)
 
@@ -22,15 +26,16 @@ This is the result of the DAG graph when tasks are completely successful.
 ![image](https://github.com/pawonrat-kh/DataPipeline_PostgreSql_Airflow/assets/90255313/760f676f-c05e-4a13-8763-1b43c69e91ff)
 
 ## The problem that I found and resolved it
-* 1. The first time on the download data task, I was going to use the wget library in Python but I found a problem when I installed the wget PyPI version in requirements.txt and then ran the Docker. It did not identify the wget library so I used the Bash command to download data instead.
-  2. The first time on set send notification task status to email, I 
+* 1. The first time on the download data task, I was going to use the wget library in Python but I found a problem when I installed the wget PyPI version in requirements.txt also in Dockerfile and then ran the Docker. It did not identify the wget library so I used the Bash command to download data instead.
+  2. The first time on sent email notifications about task status, I used Airflow EmailOperator but it had limited about setting details of the task status, thus I used to set parameters in Environment Airflow or docker-compose.yaml file instead.
 
 ## Skills
 * 1. Python
-  2. Apache Airflow
-  3. Docker
-  4. Data modeling
-  5. Data pipeline
-  6. Databases
-  7. Shell scripting
+  2. SQL
+  3. Apache Airflow
+  4. Docker
+  5. Data modeling
+  6. Data pipeline
+  7. Databases
+  8. Shell scripting
      
