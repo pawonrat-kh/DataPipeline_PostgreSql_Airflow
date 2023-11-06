@@ -8,7 +8,7 @@ I used a data pipeline tool, which is Apache Airflow to run the pipeline, set a 
 
 To install Apache Airflow on Docker, you can follow by steps at https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html.
 
-This is a data pipeline overview.
+This is a data pipeline overview:
 
 ![Coffee DataPipeline drawio (1)](https://github.com/pawonrat-kh/DataPipeline_PostgreSql_Airflow/assets/90255313/9d951855-fc3b-463a-8fda-ed1ce8bd8f75)
 
@@ -21,12 +21,12 @@ In the data pipeline, I have 6 tasks.
   6. Delete file after inserted: I deleted the file after the insert task finished.
   When all tasks are successful or some tasks fail it will send a notification to the email that you set.
 
-This is the result of the DAG graph when tasks are completely successful.
+This is the result of the DAG graph when tasks are completely successful:
 
 ![image](https://github.com/pawonrat-kh/DataPipeline_PostgreSql_Airflow/assets/90255313/760f676f-c05e-4a13-8763-1b43c69e91ff)
 
 ## The problem that I found and resolved it
-* 1. The first time on the download data task, I was going to use the wget library in Python but I found a problem when I installed the wget PyPI version in requirements.txt also in Dockerfile and then ran the Docker. It did not identify the wget library so I used the Bash command to download data instead.
+* 1. The first time on the download data task, I was going to use the wget library in Python but I found a problem when I installed the wget PyPI version in requirements.txt also in Dockerfile and then ran the Docker. It did not recognize the wget library so I used the Bash command to download data instead.
   2. The first time on sent email notifications about task status, I used Airflow EmailOperator but it had limited about setting details of the task status, thus I used to set parameters in Environment Airflow or docker-compose.yaml file instead.
 
 ## Skills
